@@ -6,5 +6,8 @@ Executable is available for download in releases and does not require any python
 Python script can be ran in a console using "python scraper.py"
 ## requirements to run script 
 Selenium - pip install selenium
+
 fpdf - pip install fpdf2
+
 Google Chrome - https://www.google.com/chrome/
+

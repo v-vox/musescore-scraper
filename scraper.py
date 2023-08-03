@@ -7,7 +7,7 @@ import fpdf
 
 import time
 import requests
-import pathlib
+from pathlib import Path
 import shutil
 import os
 
@@ -106,6 +106,11 @@ def png_compile_pdf(images, name: str="score", output_dir: str=""):
 
 def scrape(url, output_dir: str=""):
     images, truncated_title, file_type = get_src(url)
+    
+    if output_dir == "":
+        output_dir = Path.cwd()
+    print(output_dir)
+
 
     if file_type == "png":
         png_compile_pdf(images, truncated_title, output_dir)
